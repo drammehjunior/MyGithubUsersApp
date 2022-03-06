@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/activity_main"
+		android:background="@android:color/white"
+		tools:context=".MainActivity">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		tools:context=".UserDetailActivity">
+
+	<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		<de.hdodenhof.circleimageview.CircleImageView
+				android:id="@+id/img_item_photo"
+				android:layout_width="250dp"
+				android:layout_height="250dp"
+				android:layout_gravity="center"
+				android:layout_marginVertical="34dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				tools:src="@tools:sample/avatars" />
+
+		<TextView
+				android:id="@+id/user_username"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom|center"
+				android:layout_marginLeft="14dp"
+				android:layout_marginBottom="10dp"
+				android:background="#FFFFFF"
+				android:drawableLeft="@drawable/ic_collections_black"
+				android:drawablePadding="4dp"
+				android:gravity="center_vertical"
+				android:padding="4dp"
+				android:text="@string/githubname_placeholder"
+				android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+	</FrameLayout>
+
+	<TextView
+			android:id="@+id/user_name"
+			style="@style/TextContent.centralized"
+			android:layout_marginTop="16dp"
+			android:text="@string/hellogithub_user_placeholder"
+			android:textSize="32sp" />
+
+	<TextView
+			android:id="@+id/user_location"
+			style="@style/TextContent.centralized"
+			android:text="@string/user_location_placeholder" />
+
+	<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="24dp"
+			android:layout_marginRight="7dp"
+			android:layout_marginBottom="16dp">
+
+		<TextView
+				android:id="@+id/user_repository"
+				style="@style/TableText"
+				android:drawableLeft="@drawable/ic_collections_repo"
+				android:text="@string/githubuser_repository_placeholder"
+				android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+		<TextView
+				android:id="@+id/user_company"
+				style="@style/TableText"
+				android:drawableLeft="@drawable/ic_collections_company"
+				android:text="@string/githubuser_company_placeholder"
+				android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+	</TableLayout>
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="56dp"
+			android:layout_marginEnd="16dp"
+			android:layout_marginBottom="16dp">
+
+		<ImageView
+				android:id="@+id/followers_icon"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_centerVertical="true"
+				android:layout_marginEnd="8dp"
+				android:src="@drawable/ic_collections_people" />
+
+		<TextView
+				android:id="@+id/user_follower"
+				style="@style/TextContent"
+				android:layout_marginStart="0dp"
+				android:layout_toEndOf="@+id/followers_icon"
+				android:text="@string/followers_placeholder" />
+
+		<TextView
+				style="@style/IconText"
+				android:layout_alignBottom="@id/followers_icon"
+				android:layout_marginStart="2dp"
+				android:layout_marginBottom="2dp"
+				android:layout_toEndOf="@+id/user_follower"
+				android:text="@string/followers"
+				android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+		<ImageView
+				android:id="@+id/following_icon"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:layout_centerInParent="true"
+				android:layout_marginEnd="8dp"
+				android:gravity="center_vertical"
+				android:src="@drawable/ic_collections_following" />
+
+		<TextView
+				android:id="@+id/user_following"
+				style="@style/TextContent"
+				android:layout_marginStart="0dp"
+				android:layout_toEndOf="@+id/following_icon"
+				android:text="456" />
+
+		<TextView
+				style="@style/IconText"
+				android:layout_alignBottom="@id/followers_icon"
+				android:layout_marginStart="2dp"
+				android:layout_marginBottom="2dp"
+				android:layout_toEndOf="@+id/user_following"
+				android:text="@string/following"
+				android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+	</RelativeLayout>
+
+
+</LinearLayout>
+</ScrollView>
